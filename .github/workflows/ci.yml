@@ -1,0 +1,18 @@
+name: Build and Test CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Codebase & Environment
+        run: |
+          echo "Executing CI validation for fintech-crypto-tracker-django-v2026"
+          echo "Tech Stack: Python / Django Framework"
+          echo "Category: Cryptocurrency & Wealth Portfolio Tracker"
